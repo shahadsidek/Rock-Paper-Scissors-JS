@@ -72,3 +72,9 @@ while (roundCount < 6) {
     playGame()
     roundCount += 1
 }
+
+if (UScore > CScore) {
+    console.log("Congratulations!!!!! User Wins")
+} else if (CScore > UScore) {
+    console.log("Hard Luck  (: Computer Wins")
+}
