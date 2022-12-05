@@ -3,16 +3,18 @@ let CScore = 0
 let UScore = 0
 const gameArray = ["rock", "paper", "scissors"];
 
+function computerPlay() {
+    const randomElement = gameArray[Math.floor(Math.random() * gameArray.length)];
+    return randomElement;
+}
+let computerSelection = computerPlay();
 
-let playGame = () => {
+const playerInput = () =>{
+    
+}
 
-    function computerPlay() {
-        const randomElement = gameArray[Math.floor(Math.random() * gameArray.length)];
-        return randomElement;
-    }
-    let computerSelection = computerPlay();
-
-    let playerInput = prompt('rock / paper / scissors').toLowerCase();
+const playGame = () => {
+    let playerInput = prompt('rock / paper / scissors').trim().toLowerCase();
     switch (playerInput) {
         case ('paper'):
             if (computerSelection === 'paper') {
