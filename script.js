@@ -1,10 +1,10 @@
-var roundCount = 1
-var CScore = 0
-var UScore = 0
+let roundCount = 1
+let CScore = 0
+let UScore = 0
 const gameArray = ["rock", "paper", "scissors"];
 
 
-var playGame = () => {
+let playGame = () => {
 
     function computerPlay() {
         const randomElement = gameArray[Math.floor(Math.random() * gameArray.length)];
@@ -12,7 +12,7 @@ var playGame = () => {
     }
     let computerSelection = computerPlay();
 
-    var playerInput = prompt('rock / paper / scissors').toLowerCase();
+    let playerInput = prompt('rock / paper / scissors').toLowerCase();
     switch (playerInput) {
         case ('paper'):
             if (computerSelection === 'paper') {
@@ -77,4 +77,6 @@ if (UScore > CScore) {
     console.log("Congratulations!!!!! User Wins")
 } else if (CScore > UScore) {
     console.log("Hard Luck  (: Computer Wins")
+} else {
+    console.log("Tie Dont be sad,, you will win next time ")
 }
